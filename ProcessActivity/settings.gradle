@@ -1,1 +1,1 @@
-include ':app', ':backgroudprocess'
+include ':app', ':backgroudprocess', ':mainthread'
