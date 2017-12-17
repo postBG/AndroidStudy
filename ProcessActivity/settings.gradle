@@ -1,1 +1,1 @@
-include ':app', ':backgroudprocess', ':mainthread'
+include ':app', ':backgroudprocess', ':mainthread', ':asynctask'
