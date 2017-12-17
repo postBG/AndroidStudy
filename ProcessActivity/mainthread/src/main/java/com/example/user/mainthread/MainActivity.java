@@ -22,6 +22,14 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            TextView text = (TextView) MainActivity.this.findViewById(R.id.posttxt);
+            text.setText("Start Runnable");
+        }
+    };
+
     private class CountThread extends Thread {
         @Override
         public void run() {
@@ -33,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             msg.what = 0;
             msg.arg1 = 941116;
             handler.sendMessage(msg);
+            handler.post(runnable);
         }
     }
 
